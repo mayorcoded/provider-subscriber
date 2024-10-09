@@ -21,7 +21,7 @@ forge test
 ```
 
 Considerations for improvement in the code
-* Gad Optimizations
+* Gas Optimizations
   - When checking if a subscriber is part of a provider's list, I could have used bitmasking to remove the need for
   iteration. This will provide cheap constant time checks for a subscriber in a list of subscribers. For example
   ```solidity
@@ -35,7 +35,9 @@ Considerations for improvement in the code
   environment, this would be a high consideration. 
   - More fine-grained authorization roles could have been defined, although I didn't think the functionalities needed
   it. But in a large scale system, this would be a high consideration for me. 
-
+* Robust Tests
+  * Due to time-constrainsts I was not able to extensively test all the features for edge cases. In a production environment,
+  all feature will have very extensive unit and integration tests
 
 Bonus Section Considerations 
 * Balance Management:
@@ -88,3 +90,4 @@ Bonus Section Considerations
   subscription until a time when the subscriber is ready to accept the new proposal. This ensurs that a subscriber is 
   not charged an amount they have not agreed to. 
   
+K
