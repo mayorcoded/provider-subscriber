@@ -1,2 +1,9 @@
-[profile.ci.fuzz]
+[profile.default]
+solc-version = "0.8.24"
 runs = 10_000
+via_ir = true
+remappings = [
+    "forge-std/=lib/forge-std/src/",
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/"
+]
